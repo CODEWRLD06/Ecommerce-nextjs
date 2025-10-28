@@ -1,11 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import styles from "./page.module.css"
 
+
 export default function ProductDetails({ params }) {
-    const id = params.id
+    const { id } = React.use(params)
     const [product, setProduct] = useState(null)
     const [selectedImage, setSelectedImage] = useState(0)
 
